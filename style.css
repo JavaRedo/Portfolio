@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.background{
+    height: max-content;
+    background-color: rgb(86, 84, 84);
+    padding: 30px;
+    margin: 0;
+}
+
+.navBar{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.linkBackground{
+    width: fit-content;
+    height: fit-content;
+    padding : 10px;
+    margin: 0 0 20px 20px;
+    background-color: rgb(221, 146, 8);
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+    border-radius: 10px;
+}
+.navLink{
+    font-size: larger;
+    color: black;
+}
+/* 
+@keyframes navLink{
+    
+
+} */
+
+
+.navLink:visited,.navLink:link{
+    text-decoration: none;
+}
+
+.linkBackground:hover{
+    animation-name: flood;
+    animation-timing-function: ease;
+}
+
+@keyframes flood {
+    0% {transform:translateX(10)};
+    25% {transform:rotateX(50)};
+    50% {transform:rotateX(0)};
+    75% {transform:rotateX(15)};
+    100% {transform:rotateX(20)};
+}
+
+.aboutMeContainer{
+    width: 100%;
+    height: 360px;
+    background-color: white;    
+    display: flex;
+}
+
