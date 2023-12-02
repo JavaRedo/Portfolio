@@ -1,20 +1,24 @@
 *{
     box-sizing: border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
 }
 
 .background{
     height: max-content;
-    background-color: rgb(86, 84, 84);
+    background-color: #ebcfc4;
     padding: 30px;
     margin: 0;
+    /* background-image: linear-gradient(25deg ,rgb(86, 84, 84),rgb(61,60,60)); */
 }
 
 .navBar{
-    width: 100%;
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: flex-start;    
 }
 
 .linkBackground{
@@ -22,20 +26,14 @@
     height: fit-content;
     padding : 10px;
     margin: 0 0 20px 20px;
-    background-color: rgb(221, 146, 8);
+    background-color: #efeeee;
     animation-duration: 20s;
     animation-iteration-count: 1;
     border-radius: 10px;
 }
 .navLink{
     font-size: larger;
-    color: black;
 }
-/* 
-@keyframes navLink{
-    
-
-} */
 
 
 .navLink:visited,.navLink:link{
@@ -47,6 +45,94 @@
     animation-timing-function: ease;
 }
 
+.aboutMeContainer{
+    width: 100%;
+    height: fit-content;    
+    display: flex;
+    flex-direction: row;
+    padding:20px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    justify-content: space-evenly;
+}
+
+.textContainer{
+    width: 50%;
+    height: 500px;
+    font-size: 32px;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#introHeader{
+    transform: translateX(-120%);
+    font-size: 62;
+    animation-name: appear;
+    animation-timing-function:cubic-bezier(0,0,0,1);
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    padding-left: 10PX;
+}
+
+#introText{
+    font-weight: 600;
+    transform: translateX(-120%);
+    /* padding: 2em 0; */
+    padding-left: 10PX;
+    font-size: 32;
+    animation-name: appear;
+    animation-timing-function:cubic-bezier(0,0,0,1);
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+
+.educationContainerBackground{
+    transform: translateX(10px);
+    transform: translateY(-10px);
+    width:50%;
+    height: 600px;
+    background-color: #efeeee;
+    border-radius: 20px;
+    color: #ebcfc4;
+}
+
+.educationContainer{
+    width:50%;
+    height: 600px;
+    background-color: #efeeee;
+    border-radius: 20px;
+    color: #ebcfc4;
+}
+
+
+
+
+
+
+
+/* CSS Animations */
+
+@keyframes appear {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    };
+    75%{
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+        border-left: 4px solid #efeeee
+    };
+}
+
 @keyframes flood {
     0% {transform:translateX(10)};
     25% {transform:rotateX(50)};
@@ -54,11 +140,3 @@
     75% {transform:rotateX(15)};
     100% {transform:rotateX(20)};
 }
-
-.aboutMeContainer{
-    width: 100%;
-    height: 360px;
-    background-color: white;    
-    display: flex;
-}
-
