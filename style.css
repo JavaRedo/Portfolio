@@ -8,24 +8,27 @@
 .background{
     height: max-content;
     background-color: #ebcfc4;
-    padding: 30px;
+    padding: 0 30px 30 0;
     margin: 0;
     /* background-image: linear-gradient(25deg ,rgb(86, 84, 84),rgb(61,60,60)); */
 }
 
 .navBar{
-    width: fit-content;
+    background-color: #ebcfc4;
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;    
+    justify-content: flex-start;
+    position: sticky;    
+    border-radius: 10px;
 }
 
 .linkBackground{
     width: fit-content;
     height: fit-content;
     padding : 10px;
-    margin: 0 0 20px 20px;
+    margin: 10px;
     background-color: #efeeee;
     animation-duration: 20s;
     animation-iteration-count: 1;
@@ -92,9 +95,9 @@
 }
 
 
-.educationContainerBackground{
-    transform: translateX(10px);
-    transform: translateY(-10px);
+.highlightsContainerBackground{
+    /* transform: translateX(10px);
+    transform: translateY(-10px); */
     width:50%;
     height: 600px;
     background-color: #efeeee;
@@ -102,13 +105,77 @@
     color: #ebcfc4;
 }
 
-.educationContainer{
-    width:50%;
-    height: 600px;
+.Container{
+    position: relative;
+    width: 100%;
+    height: 100%;
     background-color: #efeeee;
     border-radius: 20px;
-    color: #ebcfc4;
+    padding: 10px;
 }
+
+
+.slideBtnLeft{
+    color: #efeeee;
+    cursor: pointer;
+    position: absolute;
+    bottom: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s ease;
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    text-align: center;
+    padding: 12px;
+}
+
+
+.slideBtnRight{
+    right: 0;
+    position:absolute;
+    margin-right: 10px;
+    color: #efeeee;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    bottom: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50px;
+    width: 50px;
+    transition: 1s ease;
+    border-radius: 100%;
+}
+
+.slideBtnLeft:hover , .slideBtnRight:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+@keyframes hoverShade {
+    0% {
+        opacity: 50%
+    };
+    25% {
+        opacity: 60%;
+    };
+
+    50%{
+        opacity: 70%;
+    };
+    75%{
+        opacity: 80%;
+    };
+    100%{
+        opacity: 100%;
+    };
+}
+
+
+
+
+
 
 
 
@@ -122,14 +189,16 @@
     0% {
         transform: translateX(-100%);
         opacity: 0;
+        border-left: 1px solid #efeeee
     };
     75%{
         opacity: 0;
+        border-left: 5px solid #efeeee
     }
     100% {
         transform: translateX(0%);
         opacity: 1;
-        border-left: 4px solid #efeeee
+        border-left: 10px solid #efeeee
     };
 }
 
