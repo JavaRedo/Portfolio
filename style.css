@@ -14,14 +14,15 @@
 }
 
 .navBar{
-    background-color: #ebcfc4;
+    background-color: #efeeee;
     width: 100%;
     height: fit-content;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    position: sticky;    
-    border-radius: 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 1;    
 }
 
 .linkBackground{
@@ -35,7 +36,10 @@
     border-radius: 10px;
 }
 .navLink{
+    cursor: pointer;
     font-size: larger;
+    font-weight: 600;
+    border: 0px;
 }
 
 
@@ -48,12 +52,18 @@
     animation-timing-function: ease;
 }
 
+#AboutMeLinkRef{
+    width: 100%;
+    height: 10px;
+    padding-bottom: 10px;
+}
+
 .aboutMeContainer{
     width: 100%;
     height: fit-content;    
     display: flex;
     flex-direction: row;
-    padding:20px; 
+    /* padding:20px;  */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: space-evenly;
 }
@@ -71,7 +81,7 @@
 
 #introHeader{
     transform: translateX(-120%);
-    font-size: 62;
+    font-size: 44px;
     animation-name: appear;
     animation-timing-function:cubic-bezier(0,0,0,1);
     animation-duration: 2s;
@@ -99,19 +109,21 @@
     /* transform: translateX(10px);
     transform: translateY(-10px); */
     width:50%;
-    height: 600px;
+    height: fit-content;
     background-color: #efeeee;
     border-radius: 20px;
     color: #ebcfc4;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .Container{
     position: relative;
     width: 100%;
-    height: 100%;
-    background-color: #efeeee;
-    border-radius: 20px;
-    padding: 10px;
+    height: 500px;
+    background-color: #999999;
+    border-radius: 0px 0px 20px 20px;
 }
 
 
@@ -128,6 +140,7 @@
     border-radius: 100%;
     text-align: center;
     padding: 12px;
+    left: 10px;
 }
 
 
@@ -151,7 +164,77 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.selectorContainer{
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 160px;
+    left: 10px;
+    bottom: 20px;
+}
 
+.selector{
+    /* padding-right: 10px; */
+    position: relative;
+    border-radius: 100%;
+    height: 30px;
+    width : 30px;
+    background-color: aliceblue;
+}
+
+#highlights{
+    flex-basis: 0%;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    color: #999999;
+}
+
+
+.projects{
+    height: 1000px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Animations */
+
+@keyframes appear {
+    0% {
+        transform: translateX(-70%);
+        opacity: 0%;
+        border-left: 1px solid #efeeee
+    };
+    75%{
+        opacity: 0%;
+        border-left: 5px solid #efeeee
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+        border-left: 10px solid #efeeee
+    };
+}
+
+@keyframes flood {
+    0% {transform:translateX(10)};
+    25% {transform:rotateX(50)};
+    50% {transform:rotateX(0)};
+    75% {transform:rotateX(15)};
+    100% {transform:rotateX(20)};
+}
 
 @keyframes hoverShade {
     0% {
@@ -170,42 +253,4 @@
     100%{
         opacity: 100%;
     };
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* CSS Animations */
-
-@keyframes appear {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-        border-left: 1px solid #efeeee
-    };
-    75%{
-        opacity: 0;
-        border-left: 5px solid #efeeee
-    }
-    100% {
-        transform: translateX(0%);
-        opacity: 1;
-        border-left: 10px solid #efeeee
-    };
-}
-
-@keyframes flood {
-    0% {transform:translateX(10)};
-    25% {transform:rotateX(50)};
-    50% {transform:rotateX(0)};
-    75% {transform:rotateX(15)};
-    100% {transform:rotateX(20)};
 }

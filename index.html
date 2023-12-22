@@ -2,19 +2,21 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <title>JavaRedo Portfolio</title>
+        <script src="/navBarOffset.js"></script>
     </head>
     <body class="background">
-        <nav class="navBar">
+        <nav class="navBar" >
             <div class="linkBackground">
-                <a class="navLink" href="">About me</a>
+                <button class="navLink" onClick="navBarOffset()">About me</button>
             </div>
             <div class="linkBackground">
-                <a class="navLink" href="">Projects</a>
+                <button class="navLink" onclick="navBarOffset()">Projects</button>
             </div>
             <div class="linkBackground">
-                <a class="navLink" href="">My skills</a>
+                <button class="navLink" href="">My skills</button>
             </div>
         </nav>
+        <div id="AboutMeLinkRef"></div>
         <section class="aboutMeContainer">
             <div class="textContainer">
                 <h2 id="introHeader">Hi &#128075 I'm JavaRedo , and welcome to my portfolio</h2>
@@ -27,11 +29,18 @@
                 </p>
             </div>
             <div class="highlightsContainerBackground">
+                <h2 id="highlights">Highlights</h2>
                 <div class="Container">
                     <div class="slideBtnLeft">L</div>
                     <div class="slideBtnRight">R</div>
+                    <div class="selectorContainer">
+                        <div class="selector"></div>
+                        <div class="selector"></div>
+                        <div class="selector"></div>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="projects"></section>
     </body>
 </html>
